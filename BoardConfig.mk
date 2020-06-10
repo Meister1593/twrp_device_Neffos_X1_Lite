@@ -38,7 +38,7 @@ TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
 TARGET_CPU_ABI := arm64-v8a
 TARGET_CPU_ABI2 :=
-TARGET_CPU_VARIANT := cortex-a53
+TARGET_CPU_VARIANT := generic
 TARGET_CPU_CORTEX_A53 := true
 
 # For 32 bit
@@ -143,7 +143,7 @@ BOARD_CHARGER_ENABLE_SUSPEND := true
 BOARD_CHARGER_SHOW_PERCENTAGE := true
 
 # Init of the devices boots under 1s but just in case it is hot and charging...
-TARGET_INCREASES_COLDBOOT_TIMEOUT := true
+TARGET_INCREASES_COLDBOOT_TIMEOUT := false
 
 ### Recovery
 TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/recovery.fstab
@@ -154,7 +154,6 @@ RECOVERY_VARIANT := twrp
 
 ### TWRP
 RECOVERY_GRAPHICS_USE_LINELENGTH := true
-TW_CUSTOM_BATTERY_PATH := /sys/class/power_supply/battery
 TARGET_USE_CUSTOM_LUN_FILE_PATH :=  "/sys/devices/soc/11270000.usb3/musb-hdrc/gadget/lun%d/file"
 TW_CUSTOM_CPU_TEMP_PATH := /sys/class/thermal/thermal_zone1/temp
 TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
@@ -177,9 +176,9 @@ TW_NO_REBOOT_RECOVERY := false
 TW_NO_USB_STORAGE := false
 # Add an option in the "Reboot" menu to reboot into Download Mode (for Samsung devices)
 TW_HAS_DOWNLOAD_MODE := false
-#TW_NO_BATT_PERCENT := false
 # Some devices don't have a temp sensor. Disable in such case to stop spamming the recovery log
 TW_NO_CPU_TEMP := false
+#TW_NO_BATT_PERCENT := false
 
 TW_HAS_NO_BOOT_PARTITION := false
 TW_HAS_NO_RECOVERY_PARTITION := false
@@ -188,7 +187,6 @@ TW_HAS_NO_RECOVERY_PARTITION := false
 #TW_EXCLUDE_MTP := true
 # Specify a custom device name for MTP
 TW_MTP_DEVICE := "/dev/mtp_usb"
-
 
 TW_HAS_USB_STORAGE := true
 # For people who would want to have ToyBox rather than Busybox
@@ -207,10 +205,10 @@ TW_INCLUDE_FB2PNG := true
 # in your fstab, then we will automatically assume that the device is using emulated storage.
 RECOVERY_SDCARD_ON_DATA := true
 
-TW_INTERNAL_STORAGE_PATH := "/data/media"
-TW_INTERNAL_STORAGE_MOUNT_POINT := "data"
+TW_INTERNAL_STORAGE_PATH := "/sdcard"
+TW_INTERNAL_STORAGE_MOUNT_POINT := "Internal"
 TW_EXTERNAL_STORAGE_PATH := "/external_sd"
-TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sd"
+TW_EXTERNAL_STORAGE_MOUNT_POINT := "External"
 
 # This TW_THEME flag replaces the older DEVICE_RESOLUTION flag. TWRP now uses scaling to stretch
 # any theme to fit the screen resolution. There are currently 5 settings which are:

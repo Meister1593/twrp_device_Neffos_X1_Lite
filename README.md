@@ -3,7 +3,7 @@ This is a device tree for Neffos X1 Lite (TP904A) for building TWRP.
 
 Built and tested with TWRP 3.4.0 on Ubuntu 18.04 LTS (in VM QEMU/KVM, Virtual Manager)
 
-Kernel built from sources without modifications ([Neffos GPL Code center](https://www.neffos.com/en/support/gpl-code-center))
+Kernel built from sources without modifications ([Neffos GPL Code center](https://www.neffos.com/en/support/gpl-code-center)) using [Linaro gcc toolchain](https://github.com/GrowtopiaJaw/aarch64-linux-android-4.9)
 
 recovery.fstab was taken from [3.3.0 by uznaikaz@4pda](https://4pda.ru/forum/index.php?showtopic=892552&st=1240#entry85385885)
 

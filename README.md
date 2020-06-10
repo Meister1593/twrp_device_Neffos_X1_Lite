@@ -11,9 +11,9 @@ Feel free to make issues or pull requests
 
 Unresolved issues:
 - [x] Touchscreen does not work until screen went off for first time.
-- [x] Screenshots are saved to /tmp folder instead of internal sdcard pictures
 
 Working:
+- [x] Saving screenshots, only one note - you need to open internal storage one time in order to save it to internal storage
 - [x] Backing up recovery partition
 - [x] Installing recovery image from usb OTG
 - [x] Changing languages (even if internationalization is disabled)

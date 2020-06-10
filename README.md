@@ -10,7 +10,7 @@ recovery.fstab was taken from [3.3.0 by uznaikaz@4pda](https://4pda.ru/forum/ind
 Feel free to make issues or pull requests
 
 Unresolved issues:
-- [x] Touchscreen does not work until power button was pressed first time.
+- [x] Touchscreen does not work until screen went off for first time.
 - [x] Screenshots are saved to /tmp folder instead of internal sdcard pictures
 
 Working:
